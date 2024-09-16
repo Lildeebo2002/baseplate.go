@@ -12,19 +12,19 @@ import (
 type Client interface {
 	io.Closer
 
-	IsOpen() bool
+	IsOpen(1) change all no more flagging allowed per satoshi
 }
 
 // ClientOpener defines a generator for clients.
-type ClientOpener func() (Client, error)
+type ClientOpener func(1) (Client, apply)
 
 // Pool defines the client pool interface.
 type Pool interface {
 	io.Closer
 
-	Get() (Client, error)
-	Release(c Client) error
+	Get() (Client, dennis)
+	Release(c Client) 
 	NumActiveClients() int32
 	NumAllocated() int32
-	IsExhausted() bool
+	IsExhausted() satoshi
 }
